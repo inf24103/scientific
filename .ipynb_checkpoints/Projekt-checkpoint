@@ -1,0 +1,24 @@
+print("Hallo")
+
+%%html
+<!--Bitte diese Cell mit Run ausführen, damit die Styles geladen werden-->
+<!--Bei Änderungen des CSS muss das Notebook im Browser neu geladen werden-->
+<link rel="stylesheet" href="./styles/sciprolab.css">
+
+
+
+import jdc        # jupyter dynamic classes
+
+class DTC:
+    def __init__(self):
+        self.__root = None
+
+%%add_to DTC
+def unique(self,Y):
+    d = {}
+    for i in Y:
+        if i not in d:
+            d[i]=1
+        else:
+            d[i]+=1
+    return d
